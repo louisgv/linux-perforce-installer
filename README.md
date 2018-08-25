@@ -28,3 +28,42 @@ The created server will have default Perforce installation settings. This means 
 
         p4 set P4IGNORE=.p4ignore
 
+        p4 typemap
+
+```
+# Perforce File Type Mapping Specifications.
+#
+#  TypeMap:             a list of filetype mappings; one per line.
+#                       Each line has two elements:
+#
+#                       Filetype: The filetype to use on 'p4 add'.
+#
+#                       Path:     File pattern which will use this filetype.
+#
+# See 'p4 help typemap' for more information.
+
+TypeMap:
+                binary+w //depot/....exe
+                binary+w //depot/....dll
+                binary+w //depot/....lib
+                binary+w //depot/....app
+                binary+w //depot/....dylib
+                binary+w //depot/....stub
+                binary+w //depot/....ipa
+                binary //depot/....bmp
+                text //depot/....ini
+                text //depot/....config
+                text //depot/....cpp
+                text //depot/....h
+                text //depot/....c
+                text //depot/....cs
+                text //depot/....m
+                text //depot/....mm
+                text //depot/....py
+                binary+l //depot/....uasset
+                binary+l //depot/....umap
+                binary+l //depot/....upk
+                binary+l //depot/....udk
+```
+
+Source: https://docs.unrealengine.com/en-us/Engine/Basics/SourceControl/Perforce
