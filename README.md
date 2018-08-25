@@ -7,7 +7,7 @@ This script will install Perforce Server 2015.1 on a 64-bit linux host. It has o
 In shell, run the following commands in your terminal. You don't need to download this repo, that is what the first line in the following code does.
 
 ```shell
-wget https://raw.githubusercontent.com/Allar/linux-perforce-installer/master/install-perforce
+wget https://raw.githubusercontent.com/louisgv/linux-perforce-installer/master/install-perforce
 chmod +x install-perforce
 sudo ./install-perforce
 ```
@@ -21,3 +21,8 @@ Afterwards, the server will restart and you should then be able to connect to yo
 The created server will have default Perforce installation settings. This means anyone who connects to your server can create a user account without authorization. After you create your first user, you should close this security hole by using the following `p4` command from your Perforce Client.
 
         p4 configure set dm.user.noautocreate=2
+
+        p4 configure set run.users.authorize=1
+
+        p4 configure set dm.keys.hide=2
+
