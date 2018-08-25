@@ -26,3 +26,5 @@ The created server will have default Perforce installation settings. This means 
 
         p4 configure set dm.keys.hide=2
 
+        p4 set P4IGNORE=.p4ignore
+
