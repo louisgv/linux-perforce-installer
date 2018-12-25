@@ -3,6 +3,11 @@
 wget ftp://ftp.perforce.com/perforce/r18.1/bin.linux26x86_64/p4d
 chmod +x p4d
 sudo mv p4d /usr/local/bin
+
+wget ftp://ftp.perforce.com/perforce/r18.1/bin.linux26x86_64/p4
+chmod +x p4
+sudo mv p4 /usr/local/bin
+
 sudo adduser perforce
 sudo mkdir /perforce_depot
 sudo chown perforce /perforce_depot
